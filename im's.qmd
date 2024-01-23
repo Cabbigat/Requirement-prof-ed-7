@@ -4,24 +4,39 @@ author: "michael jaymar cabbigat"
 format: html
 editor: visual
 ---
+## Introduction
+Compound interest is a crucial concept in finance, representing interest calculated on both the initial principal and accumulated interest from previous periods. Understanding compound interest is fundamental for financial planning and investment decisions.
 
-## Quarto
+## Formula
+The compound interest formula is given by:
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+\[ A = P \times (1 + \frac{r}{n})^{nt} \]
 
-## Running Code
+- \(A\): Amount after \(n\) years
+- \(P\): Principal amount
+- \(r\): Annual interest rate (decimal)
+- \(n\): Number of times interest is compounded per year
+- \(t\): Time in years
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Examples
+### Example 1:
+Let's say you invest $1,000 at an annual interest rate of 5%, compounded quarterly for 3 years. The calculation would be:
 
-```{r}
-1 + 1
-```
+\[ A = 1000 \times (1 + \frac{0.05}{4})^{4 \times 3} \]
 
-You can add options to executable code like this
+### Example 2:
+...
 
-```{r}
-#| echo: false
-2 * 2
-```
+## Implementation
+### Python
+```python
+def compound_interest(principal, rate, time, comp_per_year):
+    return principal * (1 + rate/comp_per_year)**(comp_per_year*time)
 
-The `echo: false` option disables the printing of code (only output is displayed).
+# Example usage
+p = 1000
+r = 0.05
+t = 3
+n = 4
+result = compound_interest(p, r, t, n)
+print(f"Compound Interest: ${result:.2f}")
